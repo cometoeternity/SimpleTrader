@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore.SqlServer;
 using SimpleTrader.Domain.Models;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,6 +15,8 @@ namespace SimpleTrader.EntityFrameworkCore
         public DbSet<User> Users { get; set; }
         public DbSet<Account> Accounts { get; set; }
         public DbSet<AssetTransaction> AssetTransactions { get; set; }
+
+        public SimpleTraderDbContext([NotNullAttribute] DbContextOptions options) : base(options) { }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

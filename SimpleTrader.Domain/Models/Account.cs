@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace SimpleTrader.Domain.Models
 {
-    public class Account
+    public class Account : DomainObject
     {
-        public int Id { get; set; }
         public User AccountHolder { get; set; }
         public decimal Balance { get; set; }
         public IEnumerable<AssetTransaction> AssetTransactions { get; set; }

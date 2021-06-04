@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31321.278
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleTrader.Domain", "SimpleTrader.Domain\SimpleTrader.Domain.csproj", "{52606E68-765F-4E60-BCF2-7420DB5A6227}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleTrader.Domain", "SimpleTrader.Domain\SimpleTrader.Domain.csproj", "{52606E68-765F-4E60-BCF2-7420DB5A6227}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleTrader.EntityFrameworkCore", "SimpleTrader.EntityFrameworkCore\SimpleTrader.EntityFrameworkCore.csproj", "{407DCEA4-589B-46A7-ABB6-0C6D74821CCE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleTrader.EntityFrameworkCore", "SimpleTrader.EntityFrameworkCore\SimpleTrader.EntityFrameworkCore.csproj", "{407DCEA4-589B-46A7-ABB6-0C6D74821CCE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
