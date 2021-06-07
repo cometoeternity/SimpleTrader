@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using SimpleTrader.WPF.ViewModels;
+using System.Windows;
 
 namespace SimpleTrader.WPF
 {
@@ -10,6 +11,7 @@ namespace SimpleTrader.WPF
         protected override void OnStartup(StartupEventArgs e)
         {
             Window window = new MainWindow();
+            window.DataContext = new MainWindowViewModel();
             window.Show();
             base.OnStartup(e);
         }
