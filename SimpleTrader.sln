@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleTrader.Domain", "Simp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleTrader.EntityFrameworkCore", "SimpleTrader.EntityFrameworkCore\SimpleTrader.EntityFrameworkCore.csproj", "{407DCEA4-589B-46A7-ABB6-0C6D74821CCE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleTraderTestsConsole", "SimpleTraderTestsConsole\SimpleTraderTestsConsole.csproj", "{6CC94402-D168-4188-92CC-EF1B46E97937}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{407DCEA4-589B-46A7-ABB6-0C6D74821CCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{407DCEA4-589B-46A7-ABB6-0C6D74821CCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{407DCEA4-589B-46A7-ABB6-0C6D74821CCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CC94402-D168-4188-92CC-EF1B46E97937}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CC94402-D168-4188-92CC-EF1B46E97937}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CC94402-D168-4188-92CC-EF1B46E97937}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CC94402-D168-4188-92CC-EF1B46E97937}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

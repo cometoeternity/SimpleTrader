@@ -2,10 +2,7 @@
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using SimpleTrader.Domain.Models;
 using SimpleTrader.Domain.Services;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace SimpleTrader.EntityFrameworkCore.Services
@@ -57,8 +54,7 @@ namespace SimpleTrader.EntityFrameworkCore.Services
             entity.Id = id;
             context.Set<T>().Update(entity);
             await context.SaveChangesAsync();
-            return entity;
-            
+            return entity;  
         }
     }
 }
