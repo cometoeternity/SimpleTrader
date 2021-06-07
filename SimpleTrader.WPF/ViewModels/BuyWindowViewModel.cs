@@ -2,7 +2,7 @@
 
 namespace SimpleTrader.WPF.ViewModels
 {
-    public class MainWindowViewModel : ViewModelBase
+    public class BuyWindowViewModel : ViewModelBase
     {
     }
 }
