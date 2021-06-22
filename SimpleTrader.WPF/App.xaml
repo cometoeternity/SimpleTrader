@@ -11,19 +11,25 @@
                 <materialDesign:BundledTheme BaseTheme="Light" PrimaryColor="DeepPurple" SecondaryColor="Lime" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
                 <ResourceDictionary Source="/Controlls/Styles/Common.xaml"/>
+                <ResourceDictionary Source="/Controlls/Styles/NavigationBar.xaml"/>
             </ResourceDictionary.MergedDictionaries>
+            
             <DataTemplate DataType="{x:Type viewmodels:HomeWindowViewModel}">
                 <views:HomeWindow/>
             </DataTemplate>
+            
             <DataTemplate DataType="{x:Type viewmodels:BuyWindowViewModel}">
                 <views:BuyWindow/>
             </DataTemplate>
+            
             <DataTemplate DataType="{x:Type viewmodels:PortfolioWindowViewModel}">
                 <views:PortfolioWindow/>
             </DataTemplate>
+
             <DataTemplate DataType="{x:Type viewmodels:SellWindowViewModel}">
                 <views:SellWindow/>
             </DataTemplate>
         </ResourceDictionary>
+        
     </Application.Resources>
 </Application>
