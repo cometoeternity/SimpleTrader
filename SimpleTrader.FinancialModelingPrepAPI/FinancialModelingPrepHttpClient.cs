@@ -9,7 +9,7 @@ namespace SimpleTrader.FinancialModelingPrepAPI
     {
         public FinancialModelingPrepHttpClient()
         {
-            this.BaseAddress = new Uri("https://financialmodelingprep.com/api/v3");
+            this.BaseAddress = new Uri("https://financialmodelingprep.com/api/v3/");
         }
         public async Task<T> GetAsync<T>(string uri)
         {

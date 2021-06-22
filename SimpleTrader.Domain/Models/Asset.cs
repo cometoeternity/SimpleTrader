@@ -2,9 +2,7 @@
 {
     public class Asset
     {
-        public int Id { get; set; }
-        public Account Account { get; set; }
-        public Stock Stock { get; set; }
-        public int Shares { get; set; }
+        public string Symbol { get; set; }
+        public decimal PricePerShare { get; set; }
     }
 }

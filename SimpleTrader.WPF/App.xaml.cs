@@ -18,6 +18,8 @@ namespace SimpleTrader.WPF
             Window window = new MainWindow();
             window.DataContext = new MainWindowViewModel();
             window.Show();
+
+            
             base.OnStartup(e);
         }
     }
