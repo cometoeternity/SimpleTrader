@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using SimpleTrader.Domain.Models;
 using SimpleTrader.Domain.Services;
+using SimpleTrader.EntityFrameworkCore.Services.Common;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -11,28 +12,19 @@ namespace SimpleTrader.EntityFrameworkCore.Services
     {
 
         private readonly SimpleTraderDbContextFactory _contextFactory;
+        private readonly NonQueryDataService<T> _nonQueryDataService;
 
         public GenericDataService(SimpleTraderDbContextFactory contextFactory)
         {
             _contextFactory = contextFactory;
+            _nonQueryDataService = new NonQueryDataService<T>(contextFactory);
         }
 
-        public async Task<T> Create(T entity)
-        {
-            using SimpleTraderDbContext context = _contextFactory.CreateDbContext();
-            EntityEntry<T> createdResult = await context.Set<T>().AddAsync(entity);
-            await context.SaveChangesAsync();
-            return createdResult.Entity;
-        }
+        public async Task<T> Create(T entity) => await _nonQueryDataService.Create(entity);
 
-        public async Task<bool> Delete(int id)
-        {
-            using SimpleTraderDbContext context = _contextFactory.CreateDbContext();
-            T entity = await context.Set<T>().FirstOrDefaultAsync(e => e.Id == id);
-            context.Set<T>().Remove(entity);
-            await context.SaveChangesAsync();
-            return true;
-        }
+
+        public async Task<bool> Delete(int id) => await _nonQueryDataService.Delete(id);
+        
 
         public async Task<T> Get(int id)
         {
@@ -48,13 +40,7 @@ namespace SimpleTrader.EntityFrameworkCore.Services
             return entities;
         }
 
-        public async Task<T> Update(int id, T entity)
-        {
-            using SimpleTraderDbContext context = _contextFactory.CreateDbContext();
-            entity.Id = id;
-            context.Set<T>().Update(entity);
-            await context.SaveChangesAsync();
-            return entity;  
-        }
+        public async Task<T> Update(int id, T entity) => await _nonQueryDataService.Update(id, entity);
+       
     }
 }
