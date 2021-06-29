@@ -2,7 +2,7 @@
 
 namespace SimpleTrader.Domain.Services
 {
-    public interface IStokePriceService
+    public interface IStockPriceService
     {
         Task<double> GetPrice(string symbol);
     }

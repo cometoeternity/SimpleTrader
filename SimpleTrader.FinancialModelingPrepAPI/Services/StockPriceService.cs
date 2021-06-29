@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace SimpleTrader.FinancialModelingPrepAPI.Services
 {
-    public class BuyPriceService : IStokePriceService
+    public class StockPriceService : IStockPriceService
     {
         public async Task<double> GetPrice(string symbol)
         {
