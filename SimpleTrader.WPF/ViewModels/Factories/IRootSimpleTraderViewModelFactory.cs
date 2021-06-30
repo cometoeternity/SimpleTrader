@@ -3,7 +3,7 @@ using SimpleTrader.WPF.ViewModels.Base;
 
 namespace SimpleTrader.WPF.ViewModels.Factories
 {
-    public interface ISimpleTraderViewModelAbstractFactory
+    public interface IRootSimpleTraderViewModelFactory
     {
         ViewModelBase CreateViewModel(ViewType viewType);
     }
