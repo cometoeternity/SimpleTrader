@@ -23,9 +23,7 @@ namespace SimpleTrader.WPF
         protected override void OnStartup(StartupEventArgs e)
         {
             IServiceProvider serviceProvider = CreateServiceProvider();
-            IAuthenticationService authenticationService = serviceProvider.GetRequiredService<AuthenticationService>();
-            authenticationService.Register("test@gmail.com", "Test", "1234", "1234");
-
+            
             Window window = serviceProvider.GetRequiredService<MainWindow>();
             window.Show();
 
