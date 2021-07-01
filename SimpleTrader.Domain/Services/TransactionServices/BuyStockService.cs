@@ -8,9 +8,9 @@ namespace SimpleTrader.Domain.Services.TransactionServices
     public class BuyStockService : IBuyStockService
     {
         private readonly IStockPriceService _stockPriceService;
-        private readonly IDataService<Account> _accountService;
+        private readonly IAccountService _accountService;
 
-        public BuyStockService(IStockPriceService stockPriceService, IDataService<Account> accountService)
+        public BuyStockService(IStockPriceService stockPriceService, IAccountService accountService)
         {
             _stockPriceService = stockPriceService;
             _accountService = accountService;
