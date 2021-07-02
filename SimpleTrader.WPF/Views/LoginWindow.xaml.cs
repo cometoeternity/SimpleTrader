@@ -23,8 +23,8 @@ namespace SimpleTrader.WPF.Views
 
         public ICommand LoginCommand
         {
-            get { return (ICommand)GetValue(LoginCommandProperty); }
-            set { SetValue(LoginCommandProperty, value); }
+            get => (ICommand)GetValue(LoginCommandProperty);
+            set => SetValue(LoginCommandProperty, value);
         }
         // Using a DependencyProperty as the backing store for LoginCommand.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty LoginCommandProperty =
