@@ -7,6 +7,7 @@ using SimpleTrader.Domain.Services.TransactionServices;
 using SimpleTrader.EntityFrameworkCore;
 using SimpleTrader.EntityFrameworkCore.Services;
 using SimpleTrader.FinancialModelingPrepAPI.Services;
+using SimpleTrader.WPF.State.Authenticators;
 using SimpleTrader.WPF.State.Navigators;
 using SimpleTrader.WPF.ViewModels;
 using SimpleTrader.WPF.ViewModels.Factories;
@@ -49,8 +50,10 @@ namespace SimpleTrader.WPF
             services.AddSingleton<ISimpleTraderViewModelFactory<PortfolioWindowViewModel>, PortfolioWindowViewModelFactory>();
             //services.AddSingleton<ISimpleTraderViewModelFactory<BuyWindowViewModel>, BuyWindowViewModelFactory>();
             services.AddSingleton<ISimpleTraderViewModelFactory<SellWindowViewModel>, SellWindowViewModelFactory>();
+            services.AddSingleton<ISimpleTraderViewModelFactory<LoginWindowViewModel>, LoginWindowViewModelFactory>();
 
             services.AddScoped<INavigator, Navigator>();
+            services.AddScoped<IAuthenticator, Authenticator>();
             services.AddScoped<MainWindowViewModel>();
             services.AddScoped<BuyWindowViewModel>();
             services.AddScoped<MainWindow>(s => new MainWindow(s.GetRequiredService<MainWindowViewModel>()));

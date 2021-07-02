@@ -6,6 +6,7 @@ namespace SimpleTrader.WPF.State.Navigators
 
     public enum ViewType
     {
+        Login,
         Home,
         Portfolio,
         Buy,

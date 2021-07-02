@@ -29,6 +29,10 @@
             <DataTemplate DataType="{x:Type viewmodels:SellWindowViewModel}">
                 <views:SellWindow/>
             </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewmodels:LoginWindowViewModel}">
+                <views:LoginWindow LoginCommand="{Binding LoginCommand}"/>
+            </DataTemplate>
         </ResourceDictionary>
         
     </Application.Resources>
