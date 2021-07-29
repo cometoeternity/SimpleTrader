@@ -9,7 +9,7 @@ namespace SimpleTrader.WPF.ViewModels
 {
     public class MainWindowViewModel : ViewModelBase
     {
-        private readonly IRootSimpleTraderViewModelFactory _viewModelFactory;
+        private readonly ISimpleTraderViewModelFactory _viewModelFactory;
 
         public INavigator Navigator { get; set; }
         public IAuthenticator Authenticator { get; }
@@ -18,7 +18,7 @@ namespace SimpleTrader.WPF.ViewModels
 
         //С помощью этого конструктора при включении приложения будет сразу открываться
         //ViewType.Home
-        public MainWindowViewModel(INavigator navigator, IRootSimpleTraderViewModelFactory viewModelFactory ,IAuthenticator authenticator)
+        public MainWindowViewModel(INavigator navigator, ISimpleTraderViewModelFactory viewModelFactory ,IAuthenticator authenticator)
         {
             Navigator = navigator;
             Authenticator = authenticator;
