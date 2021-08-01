@@ -1,6 +1,6 @@
 ﻿using SimpleTrader.Domain.Models;
 using SimpleTrader.Domain.Services.AuthenticationServices;
-using SimpleTrader.WPF.ViewModels;
+using SimpleTrader.WPF.Models;
 using SimpleTrader.WPF.State.Accounts;
 using System;
 using System.Threading.Tasks;

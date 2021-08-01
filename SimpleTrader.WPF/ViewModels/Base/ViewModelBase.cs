@@ -1,5 +1,4 @@
-﻿using System.ComponentModel;
-using System.Runtime.CompilerServices;
+﻿using SimpleTrader.WPF.Models;
 
 namespace SimpleTrader.WPF.ViewModels.Base
 {
@@ -7,13 +6,8 @@ namespace SimpleTrader.WPF.ViewModels.Base
 
 
 
-    public class ViewModelBase : INotifyPropertyChanged
+    public class ViewModelBase : ObservableObject
     {
-        public event PropertyChangedEventHandler PropertyChanged;
 
-        protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
     }
 }
