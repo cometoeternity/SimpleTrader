@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SimpleTrader.WPF.ViewModels.Base;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,16 +7,16 @@ using System.Threading.Tasks;
 
 namespace SimpleTrader.WPF.ViewModels
 {
-    public class AssetViewModel
+    public class AssetViewModel : ViewModelBase
     {
         public string Symbol { get; }
         public int Shares { get; }
 
 
-        public AssetViewModel(string symbol, int myProperty)
+        public AssetViewModel(string symbol, int shares)
         {
             Symbol = symbol;
-            Shares = myProperty;
+            Shares = shares;
         }
     }
 }
